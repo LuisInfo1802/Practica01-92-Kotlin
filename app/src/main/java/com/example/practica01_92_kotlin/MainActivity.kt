@@ -19,9 +19,11 @@ class MainActivity : AppCompatActivity() {
         val txtNombre = findViewById<EditText>(R.id.txtNombre) as EditText;
         val lblSaludar = findViewById<TextView>(R.id.lblSaludo) as TextView;
         val btnCerrar = findViewById<Button>(R.id.btnCerrar) as Button;
+        val btnLimpiar = findViewById<Button>(R.id.btnLimpiar) as Button;
 
+        //Acción del Botón
         btnSaludar.setOnClickListener(View.OnClickListener {
-
+            //Validación
             if(txtNombre.text.toString()=="")
             {
                 Toast.makeText(this@MainActivity, "El campo esta vacio",Toast.LENGTH_SHORT).show();
@@ -31,8 +33,16 @@ class MainActivity : AppCompatActivity() {
                 val str="Hola "+txtNombre.getText().toString()+" ¿Como estas?";
                 lblSaludar.text=str.toString();
             }
-
         })
+        //Botón Limpiar
+        btnLimpiar.setOnClickListener(View.OnClickListener {
+            //Validar Limpiar
+
+            txtNombre.setText("");
+            lblSaludar.text=":: ::"
+        })
+
+
 
 
 
