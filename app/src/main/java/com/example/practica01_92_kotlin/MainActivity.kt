@@ -42,6 +42,10 @@ class MainActivity : AppCompatActivity() {
             lblSaludar.text=":: ::"
         })
 
+        btnCerrar.setOnClickListener(View.OnClickListener {
+            finish();
+        })
+
 
 
 
